@@ -94,20 +94,13 @@ I didn't have time to implement tests, but I would have liked to do that.
 - Node.js
 - npm
 
+### Installing dependencies
+
 To install and run the project, clone the repository and run `npm install` in the src folder. I included typescript as a dev dependency, so you can run `npm run build` to compile the typescript to javascript, if typescript is not installed globally.
 
 After installing the dependencies and compling the typescript, you can run the project with `npm start`. This will run the `dist/app.js` file, which is the compiled javascript file.
 
-## Project structure
-
-The project is structured as follows:
-
-- `src` - contains the source code
-- `src/uriparser.ts` - contains the uriparser class
-- `src/client.ts` - contains the code that runs the uriparser class. This is a simple client that takes in a URI in a string format and runs the uriparser class on it.
-- `src/app.ts` - contains the code that runs the project
-
-## Output in terminal
+### Output in terminal
 
 If the URI is valid, the output will look like this:
 
@@ -154,3 +147,14 @@ parameters :  {}
 path :  
 
 ```
+
+## Project structure
+
+The project is structured as follows:
+
+- `src` - contains the source code
+- `src/uriparser.ts` - contains the uriparser class
+- `src/client.ts` - contains the code that runs the uriparser class. This is a simple client that takes in a URI in a string format and runs the uriparser class on it.
+- `src/app.ts` - contains the code that runs the project
+
+
