@@ -6,7 +6,7 @@
 
 ## How I understood the problem
 
-The task was to create a program that takes in a URI in a string format, validates the scheme, path and parameters, then saves the required parts of the URI and returns them. I assumed that that the given URI always has a scheme, a path and parameters and no other parts. Also assumed that the URI is always given in a string format, and if the path was correct, and the parameters were correct as if their keys were correctly spelled and their values were of the correct type, then the URI is valid.
+The task was to create a program that takes in a URI in a string format, validates the scheme, path and parameters, then saves the required parts of the URI and returns them. I assumed that that the given URI always has a scheme, a path and parameters and no other parts. Also assumed that the URI is always given in a string format, and if the path was correct, and the parameters were correct as in their keys were correctly spelled and their values were of the correct type, then the URI is valid.
 
 I chopped the problem into three parts:
 
@@ -17,7 +17,7 @@ I chopped the problem into three parts:
 
 ### 1. Creating a class that takes in a URI in a string format
 
-I created a class called `UriParser` that takes in a URI in a string format. The class has three properties:
+I created a class called `UriParser` which takes in a URI in a string format. The class has three properties:
 
 ```typescript
   // Class variables
@@ -26,7 +26,7 @@ I created a class called `UriParser` that takes in a URI in a string format. The
   private parameters: { [key: string]: number | string };
 ```
 
-The constructor takes in the URI as a string and sets the properties. It also calls a method called `parseUri` that validates the URI and saves the required parts of the URI on creation of object.
+The constructor takes in the URI as a string and sets the properties. It also calls a method called `parseUri` which validates the URI and saves the required parts of the URI on creation of object.
 
 ```typescript
   constructor(uri: string) {
@@ -39,7 +39,7 @@ The constructor takes in the URI as a string and sets the properties. It also ca
 
 ### 2. Validating the URI
 
-Because the given URI consited of three parts, I wrote three methods for the class to validate each given part. 
+Because the given URI consisted of three parts, I wrote three methods for the class to validate each given part. 
 
 - 1. `validateSchema` - validates the scheme part of the URI
 - 2. `validatePath` - validates the path part of the URI
@@ -84,7 +84,7 @@ To return the required parts of the URI, I created boilerplate getter methods fo
 
 ## Challenges and improvements
 
-One challenge with the implementation is that the validation of the keys and values based on the path is done with a switch statement, making the code a bit repetitive and difficult to maintain. I really struggled with this part of the implementation, and took it actually took most of my time. I stuck with the switch statement because I couldn't think of a better way to do it, and my time was running out. I tried to make one loop that would validate the keys and values based on the path and pre-defined valid keys (See the validKeys variable in class UriParser). Something like this could be simpler and more maintainable, but I couldn't get it to work. 
+One challenge with the implementation is that the validation of the keys and values based on the path is done with a switch statement, making the code a bit repetitive and difficult to maintain. I really struggled with this part of the implementation, and it actually took most of my time. I stuck with the switch statement because I couldn't think of a better way to do it, and my time was running out. I tried to make one loop that would validate the keys and values based on the path and pre-defined valid keys (See the validKeys variable in class UriParser). Something like this could be simpler and more maintainable, but I couldn't get it to work. 
 
 The program also does not take into account the order of the keys and values, nor does it check if the parameters are given multiple times. These things could be also implemented and would make the program more robust.
 
