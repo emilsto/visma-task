@@ -1,5 +1,9 @@
 # Visma Solutions - programming task
 
+## Technology of choice
+
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+
 ## How I understood the problem
 
 The task was to create a program that takes in a URI in a string format, validates the scheme, path and parameters, then saves the required parts of the URI and returns them. I assumed that that the given URI always has a scheme, a path and parameters and no other parts. Also assumed that the URI is always given in a string format, and if the path was correct, and the parameters were correct as if their keys were correctly spelled and their values were of the correct type, then the URI is valid.
